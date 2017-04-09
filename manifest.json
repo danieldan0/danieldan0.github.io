@@ -1,0 +1,9 @@
+{
+    "basics": [
+        {
+            "title": "My App",
+            "entry": "main.js"
+        }
+    ]
+    
+}

@@ -2,13 +2,11 @@
 var PIXI = require('pixi.js');
 
 //creating the app
-var myView = document.getElementById('myCanvas');
-var renderer = PIXI.autoDetectRenderer(800, 600, myView); 
-document.body.appendChild(renderer.view);
-var stage = new PIXI.Stage;
+var app = new PIXI.Application(800, 600, {backgroundColor : 0x1099bb});
+document.body.appendChild(app.view);
 
 // create a texture from an image path
-var texture = PIXI.Texture.fromImage('bunny.png');
+var texture = PIXI.Texture.fromImage('required\assets\bunny.png');
 
 // scale mode for pixelation
 texture.baseTexture.scaleMode = PIXI.SCALE_MODES.NEAREST;
@@ -85,11 +83,6 @@ function onDragMove() {
     }
 }
 
-function draw() { 
-    renderer.render(stage); 
-	requestAnimationFrame(draw); 
-}
-
 app.ticker.add(function(delta) {
     //rotating bunny
     bunny.rotation += 0.1 * delta;
@@ -113,5 +106,4 @@ app.ticker.add(function(delta) {
     {
         text.text = "SMILING NICOLAS CAGE'S FACE";
     }
-	draw();
 });
