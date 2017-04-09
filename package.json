@@ -1,0 +1,27 @@
+{
+  "name": "bunny",
+  "version": "1.0.0",
+  "description": "Put bunny back in the box",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danieldan0/danieldan0.github.io.git"
+  },
+  "keywords": [
+    "pixijs",
+    "game",
+    "demo"
+  ],
+  "author": "Daniel Nakushnov (danieldan0)",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/danieldan0/danieldan0.github.io/issues"
+  },
+  "homepage": "https://github.com/danieldan0/danieldan0.github.io#readme",
+  "dependencies": {
+    "pixi.js": "github:goodboydigital/pixi.js"
+  }
+}
