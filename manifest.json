@@ -2,7 +2,7 @@
     "basics": [
         {
             "title": "My App",
-            "entry": "danieldan0.github.io/required/examples/main.js"
+            "entry": "main.js"
         }
     ]
     
