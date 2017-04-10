@@ -93,15 +93,26 @@ app.ticker.add(function(delta) {
     //changing text
     if(!bunnyIsInTheBox)
     {
-        if(counter > 1)
+        if(counter > 5)
         {
             counter -= 1 / 60 * delta;
             text.text = 'PUT THE BUNNY BACK IN THE BOX ' + Math.trunc(counter);
+		} else if(counter > 1)
+		{
+			counter -= 1 / 60 * delta;
+			text.text = 'I SAID, PUT THE BUNNY BACK IN THE BOX ' + Math.trunc(counter);
         } else {
             text.text = "WHY COULDN'T YOU PUT THE BUNNY BACK IN THE BOX";
         }
     } else
     {
-        text.text = "SMILING NICOLAS CAGE'S FACE";
+		if(bunnyPos.x > 50 && bunnyPos.x < 170 && bunnyPos.y > 250 && bunnyPos.y < 370 && counter >= 1)
+        {
+            text.text = "SMILING NICOLAS CAGE'S FACE";
+        } else
+		{
+			counter = 10;
+			bunnyIsInTheBox = false;
+		}
     }
 });
